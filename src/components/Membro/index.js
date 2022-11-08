@@ -8,15 +8,11 @@ class Membro extends Component{
             nome: props.nome
         }
         this.entrar = this.entrar.bind(this);
-        this.sair = this.sair.bind(this);
+       
     }
 
     entrar(){
         this.setState({nome: 'Jeff'})
-    }
-
-    sair(){
-        this.setState({nome: ''})
     }
 
 render(){
@@ -26,7 +22,7 @@ render(){
         <button onClick={this.entrar}>
             Entrar como Jeff
         </button>
-        <button onClick={this.sair}>
+        <button onClick={()=> this.setState({nome: ''})}>
             Sair
         </button>
     </div>
